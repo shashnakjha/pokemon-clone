@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import loader from "../../../../assets/loader.gif";
 
 const PokemonDetails = () => {
   const router = useRouter();
@@ -19,7 +21,15 @@ const PokemonDetails = () => {
     }
   }, [name]);
 
-  if (!pokemon) return <div>Loading...</div>;
+  if (!pokemon)
+    return (
+      <div
+        style={{ height: "100vh", width: "100%" }}
+        className="flex items-center justify-center"
+      >
+        <Image src={loader} alt="Loading..." width={200} height={200} />
+      </div>
+    );
 
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gray-100">

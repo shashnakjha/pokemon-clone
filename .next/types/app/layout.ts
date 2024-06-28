@@ -1,4 +1,4 @@
-// File: D:\pokemon-app\pokemon-search-app\src\app\layout.js
+// File: D:\new-pokemon\pokemon-clone\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
